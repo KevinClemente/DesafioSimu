@@ -2,11 +2,14 @@ from tkinter import *
 
 def createNewWindow():
     ventana = Toplevel()
-    ventana.geometry("1125x650")
+
+    ventana.geometry("1125x665")
     ventana.resizable(False,False)
     ventana.config(background="#9ad0dc")
     ventana.title("MODELO DE ELEMENTOS FINITOS")
-    
+
+
+
     def func0():
         frame1.lift()
         Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2,background="#1b6ca8",foreground="white").grid(row=0,column=20,columnspan=5)
@@ -24,7 +27,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def func1():
         frame2.lift()
@@ -43,8 +48,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
-
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
     def func2():
         frame3.lift()
         Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2).grid(row=0,column=20,columnspan=5)
@@ -62,7 +68,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def func3():
         frame4.lift()
@@ -81,7 +89,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def func4():
         frame5.lift()
@@ -100,7 +110,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def func5():
         frame6.lift()
@@ -119,7 +131,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def func6():
         frame7.lift()
@@ -138,7 +152,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def func7():
 
@@ -158,8 +174,10 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
-   
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
+
     def funcC():
         frameC.lift()
         Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2).grid(row=0,column=20,columnspan=5)
@@ -176,8 +194,10 @@ def createNewWindow():
         Button(ventana, text="K", command=funcK,width=5,height=1).grid(row=9,column=24,columnspan=2)
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
-        Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)    
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def funcL():
         frameL.lift()
@@ -196,7 +216,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def funcK():
         frameK.lift()
@@ -215,7 +237,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def funcG():
         frameG.lift()
@@ -234,7 +258,9 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1,background="#1b6ca8",foreground="white").grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
     def funcF():
         frameF.lift()
@@ -253,8 +279,10 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1,background="#1b6ca8",foreground="white").grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
-    
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
+
     def funcQ():
         frameQ.lift()
         Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2).grid(row=0,column=20,columnspan=5)
@@ -272,11 +300,78 @@ def createNewWindow():
         Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
         Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
         Button(ventana, text="Q", command=funcQ,width=5,height=1,background="#1b6ca8",foreground="white").grid(row=10,column=24,columnspan=2)
-        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
-    
+    def ensamblaje():
+        frame9.lift()
+        Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2).grid(row=0,column=20,columnspan=5)
+        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=1,column=20,columnspan=5)
+        Button(ventana, text="LOCALIZACIÓN", command=func2,width=23,height=2).grid(row=2,column=20,columnspan=5)
+        Button(ventana, text="INTERPOLACION", command=func3,width=23,height=2).grid(row=3,column=20,columnspan=5)
+        Button(ventana, text="RESIDUALES", command=func4,width=23,height=2).grid(row=4,column=20,columnspan=5)
+        Button(ventana, text="RESIDUOS PONDERADOS", command=func5,width=23,height=2).grid(row=5,column=20,columnspan=5)
+        Button(ventana, text="GALERKIN", command=func6,width=23,height=2).grid(row=6,column=20,columnspan=5)
+        Button(ventana, text="INTEGRACIÓN POR PARTES", command=func7,width=23,height=2).grid(row=7,column=20,columnspan=5)
+        Label(ventana,  text="COMPONENTES DE MATRIZ",width=23,height=2).grid(row=8,column=20,columnspan=5)
+        Button(ventana, text="C", command=funcC,width=5,height=1).grid(row=9,column=20,columnspan=2)
+        Button(ventana, text="L", command=funcL,width=5,height=1).grid(row=9,column=22,columnspan=2)
+        Button(ventana, text="K", command=funcK,width=5,height=1).grid(row=9,column=24,columnspan=2)
+        Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
+        Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
+        Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
+        Button(ventana, text="ENSAMBLAJE",width=23,command=func1,height=2,background="#1b6ca8",foreground="white").grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="SIGUIENTE",width=8,command=ensamblaje2,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=17,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
 
-   
+    def ensamblaje1():
+        frame9.lift()
+        Button(ventana, text="SIGUIENTE",width=8,command=ensamblaje2,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=17,columnspan=5)
+
+    def ensamblaje2():
+        frame10.lift()
+        Button(ventana, text="SIGUIENTE",width=8,command=ensamblaje3,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=17,columnspan=5)
+        Button(ventana, text="ANTERIOR",width=8,command=ensamblaje1,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=2,columnspan=5)
+
+    def ensamblaje3():
+        frame11.lift()
+        Button(ventana, text="ANTERIOR",width=8,command=ensamblaje2,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=2,columnspan=5)
+
+    def condiciones():
+        frame12.lift()
+        Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2).grid(row=0,column=20,columnspan=5)
+        Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=1,column=20,columnspan=5)
+        Button(ventana, text="LOCALIZACIÓN", command=func2,width=23,height=2).grid(row=2,column=20,columnspan=5)
+        Button(ventana, text="INTERPOLACION", command=func3,width=23,height=2).grid(row=3,column=20,columnspan=5)
+        Button(ventana, text="RESIDUALES", command=func4,width=23,height=2).grid(row=4,column=20,columnspan=5)
+        Button(ventana, text="RESIDUOS PONDERADOS", command=func5,width=23,height=2).grid(row=5,column=20,columnspan=5)
+        Button(ventana, text="GALERKIN", command=func6,width=23,height=2).grid(row=6,column=20,columnspan=5)
+        Button(ventana, text="INTEGRACIÓN POR PARTES", command=func7,width=23,height=2).grid(row=7,column=20,columnspan=5)
+        Label(ventana,  text="COMPONENTES DE MATRIZ",width=23,height=2).grid(row=8,column=20,columnspan=5)
+        Button(ventana, text="C", command=funcC,width=5,height=1).grid(row=9,column=20,columnspan=2)
+        Button(ventana, text="L", command=funcL,width=5,height=1).grid(row=9,column=22,columnspan=2)
+        Button(ventana, text="K", command=funcK,width=5,height=1).grid(row=9,column=24,columnspan=2)
+        Button(ventana, text="G", command=funcG,width=5,height=1).grid(row=10,column=20,columnspan=2)
+        Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
+        Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
+        Button(ventana, text="ENSAMBLAJE",width=23,height=2,command=ensamblaje).grid(row=11,column=20,columnspan=5)
+        Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2,background="#1b6ca8",foreground="white").grid(row=12,column=20,columnspan=5)
+        Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
+        Button(ventana, text="SIGUIENTE",width=8,command=condiciones1,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=17,columnspan=5)
+
+    def condiciones1():
+        frame13.lift()
+        Button(ventana, text="ANTERIOR",width=8,command=condiciones2,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=2,columnspan=5)
+
+    def condiciones2():
+        frame12.lift()
+        Button(ventana, text="SIGUIENTE",width=8,command=condiciones1,height=1,background="#1b6ca8",foreground="white").grid(row=12,column=17,columnspan=5)
+
+    def despedida():
+         frame1.lift()
+
     img1 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\planteamiento.png")
     img2 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\tabladeconectividad.png")
     img3 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\localizacion.png")
@@ -284,44 +379,61 @@ def createNewWindow():
     img5 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\residuales.png")
     img6 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\residuosponderados.png")
     img7 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\galerkin.png")
-    img8 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\integracionporpartes .PNG")
+    img8 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\integracionporpartes.PNG")
     imgC = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\c.png")
     imgL = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\l.png")
     imgK = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\k.png")
     imgG = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\g.png")
     imgF = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\f.png")
     imgQ = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\q.png")
+    img9 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\elementos1.png")
+    img10 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\elementos2.png")
+    img11 = PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\ensamblaje.png")
+    img12= PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\condiciones1.png")
+    img13= PhotoImage(file=r"C:\Users\kevin\OneDrive\Escritorio\GUI\resources\condiciones2.png")
 
-    frame1 = Label(ventana, image=img1,height=610,width=900,background="white")
-    frame2 = Label(ventana, image=img2,height=610,width=900,background="white")
-    frame3 = Label(ventana, image=img3,height=610,width=900,background="white")
-    frame4 = Label(ventana, image=img4,height=610,width=900,background="white")
-    frame5 = Label(ventana, image=img5,height=610,width=900,background="white")
-    frame6 = Label(ventana, image=img6,height=610,width=900,background="white")
-    frame7 = Label(ventana, image=img7,height=610,width=900,background="white")
-    frame8 = Label(ventana, image=img8,height=610,width=900,background="white")
-    frameC = Label(ventana, image=imgC,height=610,width=900,background="white")
-    frameL = Label(ventana, image=imgL,height=610,width=900,background="white")
-    frameK = Label(ventana, image=imgK,height=610,width=900,background="white")
-    frameG = Label(ventana, image=imgG,height=610,width=900,background="white")
-    frameF = Label(ventana, image=imgF,height=610,width=900,background="white")
-    frameQ = Label(ventana, image=imgQ,height=610,width=900,background="white")
 
-    frame1.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame2.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame3.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame4.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame5.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame6.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame7.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frame8.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frameC.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frameL.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frameK.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frameG.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frameF.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    frameQ.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=12)
-    
+    frame1 = Label(ventana, image=img1,height=630,width=900,background="white")
+    frame2 = Label(ventana, image=img2,height=630,width=900,background="white")
+    frame3 = Label(ventana, image=img3,height=630,width=900,background="white")
+    frame4 = Label(ventana, image=img4,height=630,width=900,background="white")
+    frame5 = Label(ventana, image=img5,height=630,width=900,background="white")
+    frame6 = Label(ventana, image=img6,height=630,width=900,background="white")
+    frame7 = Label(ventana, image=img7,height=630,width=900,background="white")
+    frame8 = Label(ventana, image=img8,height=630,width=900,background="white")
+    frameC = Label(ventana, image=imgC,height=630,width=900,background="white")
+    frameL = Label(ventana, image=imgL,height=630,width=900,background="white")
+    frameK = Label(ventana, image=imgK,height=630,width=900,background="white")
+    frameG = Label(ventana, image=imgG,height=630,width=900,background="white")
+    frameF = Label(ventana, image=imgF,height=630,width=900,background="white")
+    frameQ = Label(ventana, image=imgQ,height=630,width=900,background="white")
+    frame9 = Label(ventana, image=img9,height=630,width=900,background="white")
+    frame10 = Label(ventana, image=img10,height=630,width=900,background="white")
+    frame11 = Label(ventana, image=img11,height=630,width=900,background="white")
+    frame12 = Label(ventana, image=img12,height=630,width=900,background="white")
+    frame13 = Label(ventana, image=img13,height=630,width=900,background="white")
+
+
+    frame1.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame2.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame3.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame4.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame5.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame6.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame7.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame8.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frameC.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frameL.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frameK.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frameG.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frameF.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frameQ.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame9.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame10.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame11.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame12.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+    frame13.grid(row=0,column=5,padx=15,pady=15,columnspan=15,rowspan=14)
+
     frame1.lift()
     Button(ventana, text="PLANTEAMIENTO",width=23,command=func0,height=2,background="#1b6ca8",foreground="white").grid(row=0,column=20,columnspan=5)
     Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=1,column=20,columnspan=5)
@@ -337,10 +449,12 @@ def createNewWindow():
     Button(ventana, text="K", command=funcK,width=5,height=1).grid(row=9,column=24,columnspan=2)
     Button(ventana, text="G", command=funcQ,width=5,height=1).grid(row=10,column=20,columnspan=2)
     Button(ventana, text="F", command=funcF,width=5,height=1).grid(row=10,column=22,columnspan=2)
-    Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)    
-    Button(ventana, text="TABLA DE CONECTIVIDADES",width=23,command=func1,height=2).grid(row=11,column=20,columnspan=5)
+    Button(ventana, text="Q", command=funcQ,width=5,height=1).grid(row=10,column=24,columnspan=2)
+    Button(ventana, text="ENSAMBLAJE",width=23,command=ensamblaje,height=2).grid(row=11,column=20,columnspan=5)
+    Button(ventana, text="CONDICIONES DE CONTORNO",width=23,command=condiciones,height=2).grid(row=12,column=20,columnspan=5)
+    Button(ventana, text="FIN",width=23,command=despedida,height=2).grid(row=13,column=20,columnspan=5)
     ventana.mainloop()
-    
+
 app = Tk()
 app.resizable(False,False)
 app.title("MODELO DE ELEMENTOS FINITOS")
@@ -351,9 +465,6 @@ Label(miframe,text="BIENVENIDO/AS",font=(18),background="#9ad0dc").grid(row=0,co
 Label(miframe,text="Acontinuación se presenta un modelo de los elementos finitos de 3 dimensiones,",background="#9ad0dc").grid(row=1, column=0, columnspan=3,padx=10)
 Label(miframe,text="presione 'INICIAR' para continuar con un ejemplo paso por paso",background="#9ad0dc").grid(row=2, column=0, columnspan=3,padx=10)
 Button(miframe,text="INICIAR",command=createNewWindow,height="1",width="10",activebackground="#1b6ca8",activeforeground="white").grid(row=3,column=1,pady=10,padx=10)
-
-
-
 
 
 app.mainloop()
